@@ -23,7 +23,7 @@ def load_system(path: pathlib.Path) -> tuple[list[list[float]], list[float]]:
                     sign = 1
                 elif ch.isdigit() or ch == ".":
                     num += ch
-                else:                    # variable letter: the term is finished
+                else:                    
                     value = float(num) if num else 1.0
                     row[names.index(ch)]+=(sign * value)
                     sign = 1
